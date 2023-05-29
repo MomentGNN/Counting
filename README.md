@@ -46,7 +46,3 @@ python3 main_hexa.py
 
 ## License
 MIT
-
-
-
-# Counting
