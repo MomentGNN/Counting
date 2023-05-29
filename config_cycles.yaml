@@ -1,0 +1,8 @@
+# Model properties
+num_towers: 1
+hidden: 32
+hidden_final: 128
+dropout_prob: 0.5
+num_classes: 2
+num_layers: 2       # use 2 for ZINC penta, 3 for ZINC hexa, -1 for synth
+
