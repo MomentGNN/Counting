@@ -18,31 +18,34 @@ Source code for cycle counting is adapted from [https://github.com/gbouritsas/GS
 
 
 ## Dependencies
-[https://pytorch-geometric.readthedocs.io/en/latest/](Pytorch geometric) v1.6.1 was used. Please follow the instructions on the
-website, as simple installations via pip do not work. In particular, the version of pytorch used must match the one of torch-geometric.
+
 To run this code please install Python, PyTorch, and PyTorch-geometric (PyG).
+
 We have used python 3.11, Pytorch 2.0, and PyG 2.3. 
 
 Other required dependencies include pyyaml, and edict.
 
 
 ## Cycle detection
+To run the experiments for cycle detection in Section 6.2 please run:
+```
+python cycles_main_synth.py
+```
+Play with the parameters k, n, and generalization to reproduce all the experiments. In the config_cycles.yaml set num_layers : -1.
 
+To run the experiments for cycle detection in the ZINC dataset, as in Section 6.3, please run:
 ```
-python3 .py
+python cycles_ZINC.py
 ```
+for k=9 and k=10. To reproduce the reported results set num_layers : 2 for k=9 and num_layers : 3 for k=10 in the config_cycles.yaml file.
 
 ## Cycle counting
-run
+To count the 5- and 6-node cycles in the ZINC dataset run the following programms.
 ```
-python3 main_penta.py
+python main_penta.py
 ```
 ```
-python3 main_hexa.py
+python main_hexa.py
 ```
-
-
-
-
 ## License
 MIT
